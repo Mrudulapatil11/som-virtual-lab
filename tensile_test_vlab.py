@@ -392,7 +392,8 @@ elif scene == 2:
             checked[i] = st.checkbox("", value=checked[i], key=f"utm_chk_{i}")
         with col_txt:
             color = "#16a34a" if checked[i] else "#374151"
-            st.markdown(f"<span style='color:{color};font-weight:{\"600\" if checked[i] else \"400\"};'>"
+            weight = "600" if checked[i] else "400"
+            st.markdown(f"<span style='color:{color};font-weight:{weight};'>"
                         f"Step {i+1}: {step}</span><br>"
                         f"<span style='color:#6b7280;font-size:0.82rem;'>{detail}</span>",
                         unsafe_allow_html=True)
